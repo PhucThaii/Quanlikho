@@ -1,2 +1,0 @@
-# Quanlikho
-Do an OOP
