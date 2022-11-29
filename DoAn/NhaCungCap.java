@@ -17,7 +17,7 @@ public class NhaCungCap {
         DienThoai=ncc1.DienThoai;
         Diachi=ncc1.Diachi;
     }
-    public String getMaNV() {
+    public String getMaNCC() {
         return MaNCC;
     }
     public void setMaNCC(String ma) {
@@ -26,7 +26,7 @@ public class NhaCungCap {
     public String getTenNCC() {
         return TenNCC;
     }
-    public void setTenNC(String ten) {
+    public void setTenNCC(String ten) {
         this.TenNCC = ten;        
     }
     public String getDienThoai() {

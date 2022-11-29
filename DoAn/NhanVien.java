@@ -2,7 +2,8 @@ package DoAn;
 
 import java.util.Scanner;
 
-public class NhanVien {
+public class NhanVien {   
+    static Scanner sc = new Scanner(System.in);
     private String MaNV;
     private String HoNV;
     private String TenNV;
@@ -48,7 +49,7 @@ public class NhanVien {
         this.Diachi = dc;        
     }
     public void nhap(){
-        Scanner sc = new Scanner(System.in);
+    
         System.out.print("Nhap ma nhan vien: ");
         MaNV= sc.nextLine();
         System.out.print("Nhap ho nhan vien: ");
