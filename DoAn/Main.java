@@ -2,7 +2,7 @@ package DoAn;
 
 import java.util.Scanner;
 
-public class QuanLiKho{
+public class Main{
     static Scanner sc = new Scanner(System.in);
     public static void main(String args[]) {
         int t=0;

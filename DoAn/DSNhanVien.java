@@ -50,17 +50,42 @@ public void them(NhanVien x)
 }
 public void timkiem()
 {
-    int flag = 0;
-    System.out.print("Nhap ma nhan vien can tim: ");
-    String temp = sc.nextLine();
-    for(int i=0;i<dsnv.length;i++)
-    {
-        if(dsnv[i].getMaNV().equals(temp)){
-            dsnv[i].xuat();
-            flag=1;
-        }
+    System.out.println("\t\t\t\t******************************\t\t\t\t");
+    System.out.println("\t\t\t\t*     1.Tim kiem theo MaNV   *\t\t\t\t");
+    System.out.println("\t\t\t\t*     2.Tim kiem theo Ten    *\t\t\t\t");
+    System.out.println("\t\t\t\t******************************\t\t\t\t");
+    System.out.print("Moi nhap vao lua chon: ");
+    int key=sc.nextInt();
+    switch(key){
+        case 1:
+            int flag = 0;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Nhap ma nhan vien can tim: ");
+            String temp = sc.nextLine();
+            for(int i=0;i<dsnv.length;i++)
+            {
+                if(dsnv[i].getMaNV().equals(temp)){
+                    dsnv[i].xuat();
+                    flag=1;
+                }
+            }
+            if(flag==0) System.out.println("Khong tim thay!!!!");
+            break;
+        case 2:
+            int flag1 = 0;
+            System.out.print("Nhap ten nhan vien can tim: ");
+            Scanner sc1 = new Scanner(System.in);
+            String temp1 = sc1.nextLine();
+            for(int i=0;i<dsnv.length;i++)
+            {
+                if(dsnv[i].getTenNV().equalsIgnoreCase(temp1)){
+                    dsnv[i].xuat();
+                    flag1=1;
+                }
+            }
+            if(flag1==0) System.out.println("Khong tim thay!!!!");
+            break;
     }
-    if(flag==0) System.out.println("Khong tim thay!!!!");
 }
 public void sua()
 {
