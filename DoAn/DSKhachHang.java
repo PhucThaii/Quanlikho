@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DSKhachHang extends KhachHang{
+public class DSKhachHang{
     static Scanner sc = new Scanner(System.in);
      int n;
     KhachHang[] dskh=new KhachHang[n];
@@ -42,16 +42,42 @@ public class DSKhachHang extends KhachHang{
         n++;
     }
     public void timkiem(){
-        int flag =0;
-        System.out.print("Nhap ma khach hang can tim: ");
-        String temp= sc.nextLine();
-        for(int i=0; i<dskh.length; i++){
-            if(dskh[i].getMaKH().equals(temp)){
-                dskh[i].xuat();
-                flag=1;
-            }
+        System.out.println("\t\t\t\t*******************************\t\t\t\t");
+        System.out.println("\t\t\t\t*    1.Tim kiem theo MaKH     *\t\t\t\t");
+        System.out.println("\t\t\t\t*    2.Tim kiem theo TenKH    *\t\t\t\t");
+        System.out.println("\t\t\t\t*******************************\t\t\t\t");
+        System.out.print("Moi nhap vao lua chon: ");
+        int key=sc.nextInt();
+        switch(key){
+            case 1:
+                int flag = 0;
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Nhap ma khach hang can tim: ");
+                String temp = sc.nextLine();
+                for(int i=0;i<dskh.length;i++)
+                {
+                    if(dskh[i].getMaKH().equals(temp)){
+                        dskh[i].xuat();
+                        flag=1;
+                    }
+                }
+                if(flag==0) System.out.println("Khong tim thay!!!!");
+                break;
+            case 2:
+                int flag1 = 0;
+                System.out.print("Nhap ten khach hang can tim: ");
+                Scanner sc1 = new Scanner(System.in);
+                String temp1 = sc1.nextLine();
+                for(int i=0;i<dskh.length;i++)
+                {
+                    if(dskh[i].getTenKH().equalsIgnoreCase(temp1)){
+                        dskh[i].xuat();
+                        flag1=1;
+                    }
+                }
+                if(flag1==0) System.out.println("Khong tim thay!!!!");
+                break;
         }
-        if(flag==0) System.out.println("Khong tim thay!!!!");
     }
     /*public void timkiem(String ma){
         this.dskh[]=ma;

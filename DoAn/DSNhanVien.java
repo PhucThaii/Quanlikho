@@ -51,8 +51,8 @@ public void them(NhanVien x)
 public void timkiem()
 {
     System.out.println("\t\t\t\t******************************\t\t\t\t");
-    System.out.println("\t\t\t\t*     1.Tim kiem theo MaNV   *\t\t\t\t");
-    System.out.println("\t\t\t\t*     2.Tim kiem theo Ten    *\t\t\t\t");
+    System.out.println("\t\t\t\t*    1.Tim kiem theo MaNV    *\t\t\t\t");
+    System.out.println("\t\t\t\t*    2.Tim kiem theo TenNv   *\t\t\t\t");
     System.out.println("\t\t\t\t******************************\t\t\t\t");
     System.out.print("Moi nhap vao lua chon: ");
     int key=sc.nextInt();
